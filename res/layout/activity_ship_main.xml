@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/main_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottom_bar_normal_bg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/btn_container_conversation"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <RadioButton
+                android:button="@null"
+                android:checked="true"
+                android:paddingTop="7dp"
+                android:id="@+id/btn_new_good"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onCheckedChange"
+                android:drawableTop="@drawable/selector_menu_first"
+                android:text="首页"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+            <RadioButton
+                android:button="@null"
+                android:checked="false"
+                android:id="@+id/btn_boutique"
+                android:paddingTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onCheckedChange"
+                android:drawableTop="@drawable/selector_menu_pin"
+                android:scaleType="matrix"
+                android:text="品牌特卖"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+            <RadioButton
+                android:button="@null"
+                android:checked="false"
+                android:paddingTop="7dp"
+                android:id="@+id/btn_category"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onCheckedChange"
+                android:drawableTop="@drawable/selector_menu_ten"
+                android:scaleType="matrix"
+                android:text="十元购"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+            <RelativeLayout
+                style="@style/menu_item_style_cart">
+                <RadioButton
+                    android:id="@+id/btn_cart"
+                    android:button="@null"
+                    android:checked="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:onClick="onCheckedChange"
+                    android:drawableTop="@drawable/selector_menu_cart"
+                    android:text="值得逛"
+                    android:textColor="@color/main_botton_text_color"
+                    android:textSize="12sp"/>
+                <LinearLayout
+                    android:id="@+id/shopping_cart_num_bg"
+                    android:layout_width="55dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity = "center_horizontal"
+                    android:gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentTop="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvCartHint"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/cart_hint"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center"
+                        android:padding="2dp"
+                        android:paddingLeft="50dp"
+                        android:text="1300"
+                        android:textColor="#fff"
+                        android:textSize="12dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RadioButton
+                android:button="@null"
+                android:checked="false"
+                android:id="@+id/btn_personal"
+                android:paddingTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:onClick="onCheckedChange"
+                android:drawableTop="@drawable/selector_menu_account"
+                android:text="个人中心"
+                android:textColor="@color/main_botton_text_color"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_container1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/main_bottom" />
+
+</RelativeLayout>
+

@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cn.ucai.ship.fragment.Special_newFragment"
+    android:background="@color/white">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最新上线"
+        android:layout_gravity="center"
+        android:textColor="#000"/>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_special"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_refresh_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:text="刷新中..."
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_special"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</FrameLayout>
